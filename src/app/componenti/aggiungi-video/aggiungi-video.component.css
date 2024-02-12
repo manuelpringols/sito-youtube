@@ -1,0 +1,97 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    margin: 10px;
+   
+    
+  }
+
+  .example-full-width{
+    padding:20px;
+    padding-bottom: 230px;
+    border-width: 4px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    border-radius: 20px;
+    background-color:rgba(255, 0, 0, 0.953);
+    box-shadow:4px 6px 8px 2px rgba(0,0,0, 0.44);
+    -webkit-box-shadow:2px 4px 12px 4px rgba(0, 0, 0, 0.878);
+  }
+
+  .example-full-width:hover{
+    padding:20px;
+    padding-bottom: 230px;
+    border-width: 4px;
+    border-style: solid;
+    border-color: rgb(0, 255, 4);
+    border-radius: 20px;
+    background-color: rgb(14, 145, 116);
+    
+    box-shadow:4px 6px 8px 2px rgba(0,0,0, 0.44);
+    -webkit-box-shadow:2px 4px 12px 4px rgba(25, 241, 205, 0.878);
+    cursor: pointer;
+  }
+
+  .button{
+    display: table-cell;
+  max-width: 600px;
+    margin: 3px;
+  }
+
+  label{
+    color: blueviolet;
+
+  }
+  
+  .input{
+    color: blueviolet !important;
+  }
+
+  .mat-mdc-text-field-wrapper{
+    background-color: blueviolet !important;
+    color: blueviolet !important;
+  }
+
+  .form{
+    background-color: blueviolet;
+  }
+  
+  
+  ::ng-deep .mat-mdc-form-field-focus-overlay{
+    background-color: brown;
+  }
+
+  ::ng-deep .mat-mdc-text-field-wrapper {
+    border-radius: 10px !important;
+    border-width: 2px;
+    border-style: solid;
+    background-color: rgb(255, 255, 255) !important;
+  }
+
+  .error{
+    position: relative;
+    bottom: 200px;
+  }
+
+  .carda{
+    
+    width: 264px;
+    border-width: 1px;
+    border-color: rgb(0, 0, 0);
+
+    font-family: 'Trebuchet MS';
+    font-size: large;
+    color: rgba(0, 255, 17, 0.714);
+    margin-right: 6px;
+
+    background-color: rgb(47, 47, 47);
+
+  }
+
+  mat-card-content{
+    width: 263px;
+    
+    
+    
+  }

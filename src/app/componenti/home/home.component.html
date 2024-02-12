@@ -1,0 +1,108 @@
+<!-- <div [@fadeInOut]  style="display: flex; flex-wrap: wrap;">
+  <mat-card  class="example-card">
+    <mat-card-header>
+      <mat-card-title style="border-width: 3px; border-style: solid; border-radius: 20px; text-align: center;">Ccrizzi</mat-card-title>
+      <mat-card-subtitle style="font-family:cursive; font-size: 15px; font-style: italic;;">Game Divertente</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="video">
+        <iframe style="border:none; border-radius: 5px;" width="200px" height="200px" src="//www.youtube.com/embed/r4KuhxOjcgo" allowfullscreen></iframe>
+      </div>      
+    </mat-card-content>
+    <mat-card-actions>
+      
+    </mat-card-actions>
+  </mat-card>
+
+
+
+
+</div >  -->
+
+
+
+
+
+<!-- <div *ngFor="let link of linksBackendUnici; let i = index">
+  
+</div> -->
+<div style="position: sticky;
+top: 10px; margin-left: -8px; display: block; width:300px;"   class="container">
+<div  class="custom-list">
+  
+<div  class="custom-list-item"  (click)="onClick(i)"      appHighlights  *ngFor="let link of linksBackendUnici index as i" class="custom-list-item" >
+ 
+  <mat-divider></mat-divider>
+  <div class="custom-subtitle">
+    <a [routerLink]="['/sotto-componente', link.nomeCanale]">
+      <mat-list-item class="icone-folder" >
+        <mat-icon style="color: black;">folder</mat-icon>
+        {{ link.nomeCanale }}
+      </mat-list-item>
+    </a>
+    <img
+      class="icona-canale"
+      src="https://yt3.ggpht.com/gPsNb4gaPFEz4PXXbgIy_7UYAJNiZo9Q933jRtwlN7TU8ghH9EY8lJRzESDCg9nFypF-k2Zv_w=s68-c-k-c0x00ffffff-no-rj"
+    />
+  </div>
+</div>
+
+</div>
+</div>
+
+<div    class="grid" >
+<ng-container      *ngFor="let link of linksBackend  " >
+  
+   
+   
+      <mat-card [@fadeInOut] *ngIf="link.nomeCanale === nomeCanaleFromRoute"  class= "example-card" >
+        <mat-card-header   >
+          <mat-card-title
+            style="
+            font-family: Arial, Helvetica, sans-serif;
+              
+              padding: fit-content;
+              border-width: 3px;
+              border-style: outset;
+              border-radius: 3px;
+              border-top:none;
+              border-right:none;
+              border-left:none;
+              text-align: center;
+              
+              color:rgba(201, 184, 184, 0.959)
+            "
+          >
+            {{ link.nomeCanale }}
+          </mat-card-title>
+          <mat-card-subtitle
+            style="display: inline-flex; flex-wrap: wrap; color: white; font-size: 10px; font-family: Arial, Helvetica, sans-serif; "
+            >{{link.titoloVideo}}</mat-card-subtitle
+          >
+        </mat-card-header>
+        <mat-card-content>
+          <div class="video">
+            <iframe
+              style="border: inset 3px rgb(95, 95, 95); border-radius: 5px "
+              width="200px"
+              height="200px"
+              
+              [src]="sanitizer.bypassSecurityTrustResourceUrl(link.urlVideo)"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </mat-card-content>
+        <mat-card-actions> </mat-card-actions>
+      </mat-card>
+   
+ 
+ </ng-container>
+</div>
+
+
+
+
+
+
+
+  

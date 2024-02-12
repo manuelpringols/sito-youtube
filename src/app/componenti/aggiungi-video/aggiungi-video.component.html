@@ -1,0 +1,30 @@
+<form  [formGroup] ="videoform"  (ngSubmit)="OnSubmit(videoform)" class="example-form">
+    <mat-form-field  class="example-full-width">
+      <mat-label  class="label" >Inserisci Link Youtube</mat-label>
+      <input  class="input"  matInput placeholder="https://www.youtube.com/watch?v=s5vchsTdAc8" formControlName= 'link' type="text"  >
+      
+        <button  (click)="changeMessage(questoLink.urlVideo)" mat-button color="accent" class="button" >Salva Video</button>
+        
+    </mat-form-field>
+    <div class="error" *ngIf="!isInputFieldValid()" >
+      <mat-card style="border-style:solid ;  
+       " class="carda">
+        <mat-card-content ><strong style="color: rgba(158, 17, 17, 0.682);">Errore Di Inserimento:</strong> {{ inputFieldError() }}</mat-card-content>
+      </mat-card>
+      
+    </div>
+    
+  </form>
+
+  <div *ngIf="formSubmitted && isInputFieldValid()" >
+    <div >
+      <p style="font-size: 60px; margin: 20px;">Controlla Nella Sezione "casa" <mat-icon style="width: 60px;">home</mat-icon></p>
+   </div>
+  </div>
+
+
+  
+  
+  
+
+  

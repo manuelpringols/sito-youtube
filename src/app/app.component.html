@@ -1,0 +1,54 @@
+
+
+<mat-drawer-container class="example-container" [hasBackdrop]="true">
+  <mat-drawer class="drawer" #drawer [mode]="'over'">CLICCA COSE
+
+    
+    <div class="listamat" >
+    <mat-list-item>
+      
+      <a routerLink="/"><mat-icon style="border-width: 2px;" class="icon" matListItemIcon>home</mat-icon></a>
+      <p style="display: inline; margin-left: 15px;">casa</p>
+    </mat-list-item>
+     </div>
+     <div class="listamat" > 
+      <mat-list-item>
+        <a routerLink="/"><mat-icon style="border-width: 2px;" class="icon" matListItemIcon>home</mat-icon></a>
+        <p style="display: inline; margin-left: 16px; font-size: 15px;  text-align: end;">paolocannone</p>
+      </mat-list-item>
+       </div>
+       <div class="listamat" >
+        <mat-list-item>
+          <a routerLink="/foto"><mat-icon style="border-width: 2px;" class="icon" matListItemIcon>folder</mat-icon></a>
+          <p style="display:inline; margin-left: 15px;">foto</p>
+        </mat-list-item>
+         </div>
+         <div class="listamat" >
+          <mat-list-item>
+            <a routerLink="/aggiungiVideo"><mat-icon style="border-width: 2px;" class="icon" matListItemIcon>folder</mat-icon></a>
+            <p style="display:inline; margin-left: 15px;">aggiungi-video</p>
+          </mat-list-item>
+           </div>
+        </mat-drawer>
+  <mat-drawer-content>
+    <mat-toolbar class="toolbar">
+      <button mat-icon-button (click)="drawer.toggle()" class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>My.Youtube</span>
+      <span class="example-spacer"></span>
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>favorite</mat-icon>
+      </button>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>share</mat-icon>
+      </button>
+    </mat-toolbar>
+
+    <div [@routeAnimations]="prepareRoute(outlet)">
+      <router-outlet #outlet="outlet"></router-outlet>
+    </div>
+    
+    
+  </mat-drawer-content>
+</mat-drawer-container>

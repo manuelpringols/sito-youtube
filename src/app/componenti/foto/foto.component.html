@@ -1,0 +1,26 @@
+
+<div class="grid">
+    <div class="divcard"    *ngFor="let cantante of cani">
+        <mat-card [@fadeInOut]  class="example-card">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>{{cantante.nome}}</mat-card-title>
+              <mat-card-subtitle>{{cantante.cognome}}</mat-card-subtitle>
+            </mat-card-header>
+            <img class="cardimage" style="border-style:inset;border-left: 0px;border-right: 0px;" mat-card-image src={{cantante.src}} alt="Photo of a Shiba Inu">
+            <mat-card-content>
+            
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button>LIKE</button>
+              <button mat-button>SHARE</button>
+            </mat-card-actions>
+          </mat-card>
+    
+        
+    
+    </div>
+    </div>
+    
+
+    
